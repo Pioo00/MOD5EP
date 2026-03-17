@@ -1,0 +1,55 @@
+{% extends 'MyInventoryApp/base.html'%}
+{% load static %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center" style="height: 400px;"> 
+    <div class="row justify-content-center w-100"> 
+        <div class="col-10">
+            <div class="card"> 
+                <div class="card-body">
+                    <h3>Add Water Bottle:</h3>
+                    <form> 
+                        <label>SKU:</label>
+                        <input type="text" class="form-control" name="sku"> 
+                        <br>
+                        
+                        <label>Brand:</label>
+                        <input type="text" class="form-control" name="brand">
+                        <br>
+                        
+                        <div class="row"> 
+                            <div class="col-6"> 
+                                <label>Cost:</label>
+                                <input type="number" step="0.01" class="form-control" name="cost">
+                            </div>
+                            <div class="col-6"> 
+                                <label>Size:</label>
+                                <input type="text" class="form-control" name="size">
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <div class="row"> 
+                            <div class="col-6"> 
+                                <label>Mouth Size:</label>
+                                <input type="text" class="form-control" name="mouthSize">
+                            </div>
+                            <div class="col-6"> 
+                                <label>Color:</label>
+                                <input type="text" class="form-control" name="color">
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <label>Quantity:</label>
+                        <input type="number" class="form-control" name="qty">
+                        <br>
+                        
+                        <button type="submit" class="btn btn-secondary">Add Bottle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
