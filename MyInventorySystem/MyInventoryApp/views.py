@@ -9,3 +9,7 @@ def view_supplier(request):
 
 def add_bottle(request):
     return render(request, 'MyInventoryApp/add_bottle.html')
+
+def view_bottles(request):
+    bottles = WaterBottle.objects.all()
+    return render(request, 'MyInventoryApp/bottle_list.html', {'bottles': bottles})
